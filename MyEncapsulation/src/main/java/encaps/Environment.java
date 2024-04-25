@@ -1,0 +1,18 @@
+package encaps;
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Environment<T> {
+    int maxSpeed;
+
+
+    protected List<T> traffic = new ArrayList<>();
+
+    public abstract void checkTraffic();
+    public abstract void checkVehicles();
+
+    public void addTraffic(T traffic) {
+        this.traffic.add(traffic);
+    }
+
+}
